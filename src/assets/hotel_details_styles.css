@@ -1,0 +1,102 @@
+body {
+	margin: 0;
+	font-family: 'Varela', sans-serif;
+	font-size: 12px;
+}
+
+.header {
+	display: grid;
+	grid-template-columns: 1fr;
+	margin: 0;
+	padding-left: 15px;
+	color: white;
+	background: #d6610f;
+	border: 1px solid red;
+	position: sticky;
+	top: 0;
+	right: 0;
+	left: 0;
+}
+
+.hotel__details__container {
+	border: 1px solid blue;
+	display: grid;
+	grid-template-columns: 1fr;
+}
+.hero__section {
+	display: grid;
+	grid-template-columns: 1fr;
+}
+.hero__hotel--img {
+	border: 1px solid red;
+	width: 100%;
+}
+
+.hero__img--cta--button {
+	background: blue;
+	padding: 10px;
+	color: white;
+}
+.hero__hotel--title {
+	border: 1px solid green;
+	padding: 5px;
+	font-size: 3em;
+}
+
+.hero__hotel--rating__system {
+	border: 1px solid green;
+	font-size: 2em;
+	padding: 2px 0 0 15px;
+}
+
+.hotel_address {
+	border: 1px solid green;
+	padding: 2px 0 0 15px;
+	font-size: 1em;
+}
+.hotel__description {
+	border: 1px solid green;
+}
+
+.hotel__subtitle {
+	border: 1px solid green;
+	font-size: 2em;
+	margin: 0;
+	padding: 2px 0 0 15px;
+}
+
+.hotel__description--description {
+	border: 1px solid green;
+	margin: 0;
+	padding: 2px 15px 0 15px;
+	font-size: 1em;
+}
+
+.hotel__additional__services {
+	border: 1px solid green;
+	margin: 0;
+	font-size: 1em;
+}
+
+.hotel__social__media {
+	border: 1px solid green;
+	display: grid;
+	margin: 0;
+	font-size: 1em;
+}
+
+.hotel__social__media--icons {
+	border: 1px solid green;
+	margin: 0;
+	font-size: 1em;
+	text-align: center;
+	padding: 20px;
+}
+
+.footer {
+	border: 1px solid green;
+	margin: 0;
+	font-size: 1em;
+	text-align: center;
+	background: #d6610f;
+}
