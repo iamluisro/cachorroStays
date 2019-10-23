@@ -1,7 +1,11 @@
 body {
 	margin: 0;
 	font-family: 'Varela', sans-serif;
+	color: white;
 	font-size: 12px;
+	background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./img/background_pup.png');
+	background-repeat: no-repeat;
+	background-size: auto;
 }
 
 .header {
@@ -11,6 +15,8 @@ body {
 	padding-left: 15px;
 	color: white;
 	background: #d6610f;
+	box-shadow: 0 1px 7px rgba(0, 0, 0, 0.5);
+
 	/* 	border: 1px solid red;
  */
 	position: sticky;
@@ -33,12 +39,14 @@ body {
 	/* 	border: 1px solid red;
  */
 	width: 100%;
+	box-shadow: 0 1px 7px rgba(0, 0, 0, 0.5);
 }
 
 .hero__img--cta--button {
 	background: blue;
-	padding: 10px;
+	box-shadow: 0 1px 7px rgba(0, 0, 0, 0.5);
 	color: white;
+	padding: 10px;
 }
 .hero__hotel--title {
 	/* 	border: 1px solid green;
