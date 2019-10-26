@@ -1,0 +1,125 @@
+body {
+	margin: 0;
+	font-family: 'Varela', sans-serif;
+	color: white;
+	font-size: 12px;
+	background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./img/background_pup.png');
+	background-repeat: no-repeat;
+	background-size: auto;
+}
+
+.header {
+	display: grid;
+	grid-template-columns: 1fr;
+	margin: 0;
+	padding-left: 15px;
+	color: white;
+	background: #d6610f;
+	box-shadow: 0 1px 7px rgba(0, 0, 0, 0.5);
+
+	/* 	border: 1px solid red;
+ */
+	position: sticky;
+	top: 0;
+	right: 0;
+	left: 0;
+}
+
+.hotel__details__container {
+	/* 	border: 1px solid blue;
+ */
+	display: grid;
+	grid-template-columns: 1fr;
+}
+.hero__section {
+	display: grid;
+	grid-template-columns: 1fr;
+}
+.hero__hotel--img {
+	/* 	border: 1px solid red;
+ */
+	width: 100%;
+	box-shadow: 0 1px 7px rgba(0, 0, 0, 0.5);
+}
+
+.hero__img--cta--button {
+	background: blue;
+	box-shadow: 0 1px 7px rgba(0, 0, 0, 0.5);
+	color: white;
+	padding: 10px;
+}
+.hero__hotel--title {
+	/* 	border: 1px solid green;
+ */
+	padding: 10px 15px 10px 15px;
+	font-size: 3em;
+}
+
+.hero__hotel--rating__system {
+	/* 	border: 1px solid green;
+ */
+	font-size: 2em;
+	padding-left: 15px;
+}
+
+.hotel_address {
+	/* 	border: 1px solid green;
+ */
+	padding: 2px 0 0 15px;
+	font-size: 2em;
+}
+.hotel__description {
+	/* 	border: 1px solid green;
+ */
+	margin: 0;
+}
+
+.hotel__subtitle {
+	/* 	border: 1px solid green;
+ */
+	font-size: 2em;
+	margin: 0;
+	padding: 15px;
+}
+
+.hotel__description--description {
+	/* border: 1px solid green; */
+	margin: 0;
+	padding: 2px 15px 0 15px;
+	font-size: 1em;
+}
+
+.hotel__additional__services {
+	/* 	border: 1px solid green;
+ */
+	margin: 0;
+	font-size: 1em;
+}
+
+.hotel__social__media {
+	/* 	border: 1px solid green;
+ */
+	display: grid;
+	margin: 0;
+	font-size: 1em;
+}
+
+.hotel__social__media--icons {
+	/* 	border: 1px solid green;
+ */
+	margin: 0;
+	font-size: 1em;
+	text-align: center;
+	padding: 20px;
+}
+
+.footer {
+	/* 	border: 1px solid green;
+ */
+	margin: 0;
+	padding: 20px;
+	font-size: 1em;
+	text-align: center;
+	background: #d6610f;
+	color: white;
+}
