@@ -1,0 +1,98 @@
+body {
+	margin: 0;
+	font-family: 'Varela', sans-serif;
+	color: white;
+	font-size: 12px;
+	background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../img/background_pup.png');
+	background-repeat: no-repeat;
+	background-size: auto;
+}
+
+.header {
+	display: grid;
+	grid-template-columns: 1fr;
+	margin: 0;
+	padding-left: 15px;
+	color: white;
+	background: #d6610f;
+	box-shadow: 0 1px 7px rgba(0, 0, 0, 0.5);
+
+	/* 	border: 1px solid red;
+ */
+	position: sticky;
+	top: 0;
+	right: 0;
+	left: 0;
+}
+
+.hotel__details__container {
+	/* 	border: 1px solid blue;
+ */
+	display: grid;
+	grid-template-columns: 1fr;
+}
+.hero__section {
+	display: grid;
+	grid-template-columns: 1fr;
+}
+
+.hero__hotel--title {
+	/* 	border: 1px solid green;
+ */
+	padding: 10px 15px 10px 15px;
+	font-size: 3em;
+}
+
+.confirmation__mssg--dog-stays-at {
+	margin: 0 15px 0 15px;
+}
+
+.hero__hotel--img {
+	/* 	border: 1px solid red;
+ */
+	width: 100%;
+	box-shadow: 0 1px 7px rgba(0, 0, 0, 0.5);
+}
+.hero__hotel--booking_info {
+	/* for desktop: display: flex;
+    text-align: center; 
+    justify-content: space-around;*/
+	display: flex;
+	flex-direction: column;
+	margin: 0 20px 0 15px;
+	margin-top: 0.67em;
+	font-size: 2em;
+}
+
+.confirmation_pg--checkin-checkout-container {
+	padding-bottom: 20px;
+}
+
+.hotel__confirmation--hotel-contact {
+	/* padding: 2px 0 0 15px; */
+	margin: 0 15px 0 15px;
+	font-size: 1.333em;
+}
+
+.hotel__confirmation-code {
+	margin: 0 15px 0 15px;
+}
+
+.hotel__confirmation-code h1 {
+	font-size: 2em;
+}
+
+.hotel__confirmation-code p {
+	font-size: 1.33em;
+}
+
+.footer {
+	/* 	border: 1px solid green;
+ */
+	margin: 0;
+	padding: 20px;
+	font-size: 1em;
+	text-align: center;
+	background: #d6610f;
+	color: white;
+}
