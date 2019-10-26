@@ -1,19 +1,28 @@
 body {
     margin: 0;
-    font-family: "Varela";
-    height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./aseets/dog-brackground2.jpg");
-    background-repeat:no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center center;
-    color: white;
+	font-family: 'Varela', sans-serif;
+	color: white;
+	font-size: 12px;
+	background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../src//assets/images/background_pup.png');
+	background-repeat: no-repeat;
+	background-size: auto;
 }
 
 .header {
-    display: flex;
-    padding: 0px 20px;
-    height: 100px;
+    display: grid;
+	grid-template-columns: 1fr;
+	margin: 0;
+	padding-left: 15px;
+	color: white;
+	background: #d6610f;
+    box-shadow: 0 1px 7px rgba(0, 0, 0, 0.5);
+    
+    /* 	border: 1px solid red;
+ */
+	position: sticky;
+	top: 0;
+	right: 0;
+	left: 0;
 }  
 
 .header h1 {
@@ -95,8 +104,10 @@ body {
 }
 
 .footer {
-    align-items: center;
-    display: flex;
-    height: 100px;
-    width: 100%;
+    margin: 0;
+	padding: 20px;
+	font-size: 1em;
+	text-align: center;
+	background: #d6610f;
+	color: white;
 }
