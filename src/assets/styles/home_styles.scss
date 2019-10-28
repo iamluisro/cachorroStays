@@ -1,0 +1,93 @@
+body {
+	margin: 0;
+	font-family: 'Varela', sans-serif;
+	color: white;
+	font-size: 12px;
+	background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../img/background_pup.png');
+	background-repeat: repeat;
+	background-size: auto;
+}
+
+.header {
+	display: grid;
+	grid-template-columns: 1fr;
+	margin: 0;
+	padding-left: 15px;
+	color: white;
+	background: #d6610f;
+	box-shadow: 0 1px 7px rgba(0, 0, 0, 0.5);
+	position: sticky;
+	top: 0;
+	right: 0;
+	left: 0;
+}
+
+.home {
+	margin: 0;
+}
+
+.home__container {
+	margin: 0;
+	display: grid;
+	grid-column-start: 1fr;
+}
+
+.welcome__container {
+	text-align: center;
+	font-size: 2em;
+}
+
+.hotel__container {
+	align-content: center;
+	margin-bottom: 50px;
+}
+
+.hotel__Container--img {
+	width: 100%;
+	box-shadow: 0 1px 7px rgba(0, 0, 0, 0.5);
+}
+
+.hotel__container--details {
+	align-content: center;
+	margin: 0 15px;
+}
+
+.hotel__container--details--title {
+	font-size: 3em;
+	margin-top: 5px;
+	margin-bottom: 10px;
+}
+
+.hotel__container--details--subdetails {
+	font-size: 2em;
+	margin-top: 5px;
+	margin-bottom: 10px;
+}
+
+.hotel__container--rating {
+	font-size: 3em;
+}
+
+.hotel__container--buttons {
+	margin-bottom: 10px;
+}
+
+.hotel__tile--buttons {
+	background: blue;
+	color: white;
+	font-size: 24px;
+	margin: 5px;
+	padding: 10px;
+	border-radius: 5px;
+}
+
+.footer {
+	/* 	border: 1px solid green;
+ */
+	margin: 0;
+	padding: 20px;
+	font-size: 1em;
+	text-align: center;
+	background: #d6610f;
+	color: white;
+}
