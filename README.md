@@ -2,6 +2,8 @@
 
 This is the repo for the team, The Callback Boys' Platzi Escuela de JS project.
 
+This is the staging branch, where we will save all of our progress instead of saving everything to the master branch.
+
 # hotels_details_pg
 
 This branch is meant for the basic skeleton for the hotels details pg.
