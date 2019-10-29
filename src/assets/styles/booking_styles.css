@@ -1,113 +1,113 @@
 body {
-    margin: 0;
-	font-family: 'Varela', sans-serif;
-	color: white;
-	font-size: 12px;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url('../assets/images/background_pup.png');
-	background-repeat: no-repeat;
-    background-size: cover;    
+  margin: 0;
+  font-family: "Varela", sans-serif;
+  color: white;
+  font-size: 12px;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../assets/images/background_pup.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .check-in {
-    margin: 0;
-    display: flex;
+  margin: 0;
+  display: flex;
 }
 
 .check-out {
-    display: flex;
+  display: flex;
 }
 
 .header {
-    display: grid;
-	grid-template-columns: 1fr;
-	margin: 0;
-	padding-left: 15px;
-	color: white;
-	background: #d6610f;
-    box-shadow: 0 1px 7px rgba(0, 0, 0, 0.5);
-    
-    /* 	border: 1px solid red;
- */
-	position: sticky;
-	top: 0;
-	right: 0;
-	left: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 0;
+  padding-left: 15px;
+  color: white;
+  background: #d6610f;
+  box-shadow: 0 1px 7px rgba(0, 0, 0, 0.5);
+  /* 	border: 1px solid red;
+  */
+  position: sticky;
+  top: 0;
+  right: 0;
+  left: 0;
 }
 
-.hotel {
-    padding-left: 30px;
+.hotel_name {
+  padding-left: 30px;
 }
 
 .booking {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0px 30px;
-    min-height: calc(100vh - 200px);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0px 30px;
+  min-height: calc(100vh - 200px);
 }
 
 .booking__container {
-    border-radius: 10px;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    min-height: 600px;
-    width: 300px;
-  }
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  min-height: 600px;
+  width: 300px;
+}
 
-  .booking__container--form {
-    display: flex;
-    flex-direction: column;
+.booking__container--form {
+  display: flex;
+  flex-direction: column;
 }
 
 .input {
-    border-bottom: 2px solid white;
-    border-left: 0px;
-    border-right: 0px;
-    border-top: 0px;
-    color: white;
-    font-family: 'Muli', sans-serif;
-    font-size: 16px;
-    height: 25px;
-    margin-bottom: 20px;
-    padding: 0px 15px;
-  }
-
-  .booking__container--additional-services {
-    display: flex;
-    flex-direction: column;
+  border-bottom: 2px solid white;
+  border-left: 0px;
+  border-right: 0px;
+  border-top: 0px;
+  color: white;
+  font-family: "Muli", sans-serif;
+  font-size: 16px;
+  height: 25px;
+  margin-bottom: 20px;
+  padding: 0px 15px;
 }
 
-.booking__container--additional-services button { 
-    border-bottom: 2px solid white;
-    border-left: 0px;
-    border-right: 0px;
-    border-top: 0px;
-    font-family: 'Muli', sans-serif;
-    font-size: 16px;
-    height: 25px;
-    padding: 0px 15px;
+.booking__container--additional-services {
+  display: flex;
+  flex-direction: column;
+}
+
+.booking__container--additional-services button {
+  border-bottom: 2px solid white;
+  border-left: 0px;
+  border-right: 0px;
+  border-top: 0px;
+  font-family: "Muli", sans-serif;
+  font-size: 16px;
+  height: 25px;
+  padding: 0px 15px;
 }
 
 .confirm-button {
-    display: flex;
-    flex-direction: column;
-    font-size: 16px;
-    font-weight: bold;
-    font-family: 'Muli', sans-serif;
-    height: 40px;
-    letter-spacing: 1px;
-    margin: 10px 0px;
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "Muli", sans-serif;
+  height: 40px;
+  letter-spacing: 1px;
+  margin: 10px 0px;
 }
 
 .footer {
-    margin: 0;
-	padding: 20px;
-	font-size: 1em;
-	text-align: center;
-	background: #d6610f;
-	color: white;
+  margin: 0;
+  padding: 20px;
+  font-size: 1em;
+  text-align: center;
+  background: #d6610f;
+  color: white;
 }
+
+/*# sourceMappingURL=booking_styles.css.map */
