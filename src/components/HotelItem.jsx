@@ -1,13 +1,13 @@
 import React from 'react';
+import HotelImage from '../assets/img/hikaru.png';
 import '../assets/styles/home_styles.scss';
-import image from '../assets/img/hikaru.png';
 
 const HotelItem = () => {
   return (
     <div>
       <section className='hotel__container'>
         <div className='hotel__container--details'>
-          <img className='hotel__Container--img' src={image} alt='pethotel' />
+          <img className='hotel__Container--img' src={HotelImage} alt='pethotel' />
           <h1 className='hotel__container--details--title'>Pension Para Mascotas Hikaru</h1>
           <p className='hotel__container--details--subdetails'>200MXN$ / noche</p>
           <p className='hotel__container--details--subdetails'>
