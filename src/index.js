@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ConfirmationPage from './containers/ConfirmationPage';
+//import ConfirmationPage from './containers/ConfirmationPage';
 //import App from './routes/App';
+import HomePage from './containers/HomePage';
 
 ReactDOM.render(
-  <ConfirmationPage />,
+  <HomePage />,
   document.getElementById('app'),
 );
