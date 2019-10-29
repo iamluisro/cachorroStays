@@ -1,10 +1,9 @@
 import React from 'react';
-import HotelItem from '../components/HotelItem.jsx';
 
 const App = () => {
   return (
     <div>
-      <HotelItem />
+      <h1>Hola Mundo</h1>
     </div>
   );
 };
