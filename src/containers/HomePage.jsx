@@ -4,18 +4,21 @@ import Layout from '../components/Layout';
 
 const HomePage = () => {
   return (
-    <Layout>
-      <div>
-        <div className='home'>
-          <div className='home__container'>
-            <section className='welcome__container'>
-              <h1>Mensaje de Bienvenida</h1>
-            </section>
-            <HotelItem />
+    <div className='App'>
+      <Layout>
+        <div>
+          <div className='home'>
+            <div className='home__container'>
+              <section className='welcome__container'>
+                <h1>cachorroStays</h1>
+                <p>Una nueva manera de bookear a tu perrito.</p>
+              </section>
+              <HotelItem />
+            </div>
           </div>
         </div>
-      </div>
-    </Layout>
+      </Layout>
+    </div>
   );
 };
 

@@ -1,9 +1,10 @@
 @import './components/Vars.scss';
 
 body {
-	margin: 0;
 	font-family: $theme-font;
-	background: $main-color;
+	color: white;
+	font-size: 12px;
+	background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
 }
 
 * {

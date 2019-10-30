@@ -12,10 +12,10 @@
     <header class="header">
             <h1>CachorroStays</h1>   
     </header>
-            
-    <h1 class="hotel">Reservación para: kangaroo  Valley Safari</h1>
-    
     <section class="booking">
+        <div class="hotel_name">
+            <h1>Reservación para: kangaroo  Valley Safari</h1>
+        </div>
         <section class="booking__container">
             <form class="booking__container--form">
                 <h1>selecciona las fechas para tu perrito</h1>
@@ -27,13 +27,15 @@
                 <input class="input" type="text" placeholder="Whatsapp">
                 <input class="input" type="text" placeholder="Email del propietario">
             </form>
-            <h1>Selecciona un método de entrega de perrito</h1>
             <section class="booking__container--additional-services">
+                <h1>Selecciona un método de entrega de perrito</h1>
                 <button>Recoger a mi perrito</button> <br>
                 <button>Yo voy a dejar a mi perrito</button>
             </section>
+            <div className='confirm'>
+                <button class="confirm-button">Confirmar reservación</button>
+            </div>
         </section>
-        <button class="confirm-button">Confirmar reservación</button>
     </section>
 
 

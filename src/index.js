@@ -1,10 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-//import ConfirmationPage from './containers/ConfirmationPage';
-//import App from './routes/App';
-import HomePage from './containers/HomePage';
+import App from './routes/App';
+//import HomePage from './containers/HomePage';
+//import HotelDetails from './containers/HotelDetails';
+//import BookingPage from './containers/BookingPage';
 
-ReactDOM.render(
-  <HomePage />,
-  document.getElementById('app'),
-);
+ReactDOM.render(<App />, document.getElementById('app'));
