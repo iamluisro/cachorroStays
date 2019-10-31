@@ -2,7 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import HotelImage from '../assets/img/hikaru.png';
-import '../assets/styles/home_styles.scss';
+import '../assets/styles/components/home_styles.scss';
 
 const HotelItem = () => {
   return (

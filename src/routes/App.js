@@ -5,6 +5,7 @@ import HotelDetails from '../containers/HotelDetails';
 import Booking from '../containers/BookingPage';
 import ConfirmationPage from '../containers/ConfirmationPage';
 import '../assets/styles/App.scss';
+import NotFound from '../containers/NotFound';
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
         <Route exact path='/hotel-details' component={HotelDetails} />
         <Route exact path='/book' component={Booking} />
         <Route exact path='/confirmation' component={ConfirmationPage} />
+        <Route component={NotFound} />
       </Switch>
     </BrowserRouter>
   );
