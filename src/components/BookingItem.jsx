@@ -1,12 +1,13 @@
 import React from 'react';
-import '../assets/styles/booking_styles.scss';
+import { Link } from 'react-router-dom';
+import '../assets/styles/components/booking_styles.scss';
 
 const BookingItem = () => {
   return (
     <div>
       <section className='booking'>
         <div className='hotel_name'>
-          <h1>Reservación para: kangaroo  Valley Safari</h1>
+          <h1>Reservación para: kangaroo Valley Safari</h1>
         </div>
         <section className='booking__container'>
           <form className='booking__container--form'>
@@ -27,7 +28,9 @@ const BookingItem = () => {
             <button type='button'>Yo voy a dejar a mi perrito</button>
           </section>
           <div className='confirm'>
-            <button type='button'>Confirmar reservación</button>
+            <Link to='/confirmation'>
+              <button type='button'>Confirmar reservación</button>
+            </Link>
           </div>
         </section>
       </section>
