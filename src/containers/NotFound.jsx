@@ -1,7 +1,6 @@
 import React from 'react';
 import Layout from '../components/Layout';
 import '../assets/styles/components/notFound_styles.scss';
-import dogNotFoundImg from '../assets/img/dog-notfound.png';
 
 const NotFound = () => {
   return (
@@ -13,7 +12,7 @@ Page not found.
           <br />
 Lo sentimos, No pudimos encontrar dicho sitio.
         </h2>
-        <img src={dogNotFoundImg} alt='Dog-swimming' />
+        {/*   <img src={dogNotFoundImg} alt='Dog-swimming' /> */}
       </div>
     </Layout>
   );
