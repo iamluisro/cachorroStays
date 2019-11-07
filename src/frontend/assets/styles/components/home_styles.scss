@@ -1,0 +1,59 @@
+.home__container {
+	margin: 0;
+	display: grid;
+	padding: 24px;
+}
+
+.welcome__container {
+	text-align: center;
+
+	h1 {
+		font-size: 2em;
+		margin: 0;
+	}
+
+	p {
+		font-size: 1.5em;
+	}
+}
+
+.hotel__container {
+	align-content: center;
+}
+
+.hotel__container--details {
+	align-content: center;
+
+	h2 {
+		font-size: 1.5em;
+		margin: 0;
+	}
+
+	p {
+		font-size: 1.2em;
+		margin-top: 5px;
+		margin-bottom: 10px;
+	}
+
+	img {
+		width: 312px;
+		height: 208px;
+		border-radius: 5px;
+	}
+}
+
+.hotel__container--rating {
+	font-size: 1.2em;
+}
+
+.hotel__container--buttons {
+	margin-bottom: 10px;
+}
+
+.hotel__tile--buttons {
+	background: #d6610f;
+	color: white;
+	margin-right: 5px;
+	padding: 10px;
+	border-radius: 5px;
+}
