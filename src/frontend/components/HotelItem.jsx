@@ -1,24 +1,33 @@
 /* eslint-disable no-tabs */
 import React from 'react';
+import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { setFavorite } from '../actions';
 import HotelImage from '../assets/img/hikaru.png';
 import '../assets/styles/components/home_styles.scss';
 
 const HotelItem = (props) => {
-  const { hotelName, costPerNight, currency, hotelDescription, hotelRating } = props;
+  const { id, hotelName, costPerNight, currency, hotelDescription, hotelRating } = props;
+  const handleSetFavorite = () => {
+    props.setFavorite(
+      {
+        id, hotelName, costPerNight, currency, hotelDescription, hotelRating,
+      },
+    );
+  };
   return (
     <div>
       <section className='hotel__container'>
         <div className='hotel__container--details'>
           <img className='hotel__Container--img' src={HotelImage} alt='pethotel' />
-          <h1 className='hotel__container--details--title'>{hotelName}</h1>
-          <p className='hotel__container--details--subdetails'>{`${costPerNight} ${currency} / noche`}</p>
-          <p className='hotel__container--details--subdetails'>{hotelDescription}</p>
+          <h2>{hotelName}</h2>
+          <p>{`${costPerNight} ${currency} / noche`}</p>
+          <p>{hotelDescription}</p>
           <div className='hotel__container--rating'>{hotelRating}</div>
           <div className='hotel__container--buttons'>
-            <button type='button' className='hotel__tile--buttons'>
+            <button type='button' className='hotel__tile--buttons' onClick={handleSetFavorite}>
               {' '}
-							Share
+							Agregar a Favoritos
               {' '}
             </button>
             <Link to='/hotel-details'>
@@ -33,4 +42,8 @@ const HotelItem = (props) => {
   );
 };
 
-export default HotelItem;
+const mapDispatchToProps = {
+  setFavorite,
+};
+
+export default connect(null, mapDispatchToProps)(HotelItem);
