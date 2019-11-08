@@ -23,7 +23,11 @@ const HomePage = ({ hotelData, myFavorites }) => {
             {myFavorites.length > 0 && (
               <HotelCarousel>
                 {myFavorites.map((item) => (
-                  <HotelItem key={item.id} {...item} />
+                  <HotelItem
+                    key={item.id}
+                    {...item}
+                    isList
+                  />
                 ))}
               </HotelCarousel>
             )}
