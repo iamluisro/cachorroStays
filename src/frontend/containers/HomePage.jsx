@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import Layout from '../components/Layout';
 import HotelItem from '../components/HotelItem';
 import HotelCarousel from '../components/HotelCarousel';
+import FavoritesCarousel from '../components/FavoritesCarousel';
 
 const HomePage = ({ hotelData, myFavorites }) => {
 
@@ -21,7 +22,7 @@ const HomePage = ({ hotelData, myFavorites }) => {
               <p>Una nueva manera de bookear a tu perrito.</p>
             </section>
             {myFavorites.length > 0 && (
-              <HotelCarousel>
+              <FavoritesCarousel>
                 {myFavorites.map((item) => (
                   <HotelItem
                     key={item.id}
@@ -29,7 +30,7 @@ const HomePage = ({ hotelData, myFavorites }) => {
                     isList
                   />
                 ))}
-              </HotelCarousel>
+              </FavoritesCarousel>
             )}
             <HotelCarousel>
               {hotelData.map((item) => (

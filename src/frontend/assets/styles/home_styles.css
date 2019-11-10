@@ -22,6 +22,7 @@ body {
   left: 0;
 }
 
+
 .home {
   margin: 0;
 }
@@ -37,19 +38,42 @@ body {
   font-size: 2em;
 }
 
+.favoritesCarousel {
+  overflow: scroll;
+  padding-left: 15px;
+  position: relative;
+}
+
 .hotel__container {
-  align-content: center;
+  transition: 450ms -webkit-transform;
+  transition: 450ms transform;
+  transition: 450ms transform, 450ms -webkit-transform;
+  /* white-space: nowrap; */
   margin-bottom: 50px;
+}
+
+.hotel__container:hover .hotel__container--details:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  opacity: 1;
+}
+
+.hotel__container--details {
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  width: 200px;
+  height: 250px;
+  cursor: pointer;
+  -webkit-transform-origin: center left;
+          transform-origin: center left;
+  align-content: center;
+  margin: 0 15px;
 }
 
 .hotel__Container--img {
   width: 100%;
   box-shadow: 0 1px 7px rgba(0, 0, 0, 0.5);
-}
-
-.hotel__container--details {
-  align-content: center;
-  margin: 0 15px;
 }
 
 .hotel__container--details--title {

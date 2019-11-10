@@ -4,37 +4,6 @@
 	display: grid;
 	grid-template-columns: 1fr;
 }
-.hero__section {
-	display: grid;
-	grid-template-columns: 1fr;
-}
-.hero__hotel--img {
-	/* 	border: 1px solid red;
- */
-	width: 100%;
-	box-shadow: 0 1px 7px rgba(0, 0, 0, 0.5);
-}
-
-.hero__img--cta--button {
-	background: blue;
-	box-shadow: 0 1px 7px rgba(0, 0, 0, 0.5);
-	color: white;
-	padding: 10px;
-	width: 100%;
-}
-.hero__hotel--title {
-	/* 	border: 1px solid green;
- */
-	padding: 10px 15px 10px 15px;
-	font-size: 3em;
-}
-
-.hero__hotel--rating__system {
-	/* 	border: 1px solid green;
- */
-	font-size: 2em;
-	padding-left: 15px;
-}
 
 .hotel_address {
 	/* 	border: 1px solid green;
