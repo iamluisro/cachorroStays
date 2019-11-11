@@ -11,7 +11,7 @@ const RegisterForm = () => {
       <input className='inputForm' type='text' placeholder='Phone Number' />
       <input className='inputForm' type='password' placeholder='Password' />
       <input className='inputForm' type='password' placeholder='Confirm Password' />
-      <Link to='/'>
+      <Link to='/Login'>
         <button type='button' className='registerButton'>Register-me</button>
       </Link>
       <div className='privacyTerms'>

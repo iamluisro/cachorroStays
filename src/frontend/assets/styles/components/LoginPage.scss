@@ -1,0 +1,41 @@
+.login {
+//	border: 1px solid red;
+	display: grid;
+	grid-column-start: 1fr;
+}
+
+.login__container {
+	display: grid;
+	grid-column-start: 1fr;
+    align-content: center;
+    
+    h1 {
+        margin-left: 15px;
+        margin-top: 10px;
+        margin-bottom: 0;
+    }
+}
+
+.login__container--buttons {
+	display: grid;
+	margin: 0.67em;
+    padding: 1em;
+    button {
+        margin-bottom: 5px;
+    }
+}
+
+.login__container--with_email {
+	display: grid;
+	margin: 0.67em;
+    padding: 1em;
+    
+    button {
+        display: block;
+        margin: auto;
+    }
+}
+
+.login__container--with_email--form {
+	display: grid;
+}
