@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import Register from '../containers/RegisterPage';
 import Home from '../containers/HomePage';
 import HotelDetails from '../containers/HotelDetails';
 import Booking from '../containers/BookingPage';
@@ -11,6 +12,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <Switch>
+        <Route exact path='/register' component={Register} />
         <Route exact path='/' component={Home} />
         <Route exact path='/hotel-details' component={HotelDetails} />
         <Route exact path='/book' component={Booking} />
