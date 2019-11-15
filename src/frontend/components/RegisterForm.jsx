@@ -18,7 +18,7 @@ const RegisterForm = () => {
         <button type='button' className='privacyTerms__button' alt='TermsAndPolicy' />
         <p className='privacyTerms__text'>I agree to terms and privicy policy</p>
       </div>
-      <Link to='/'>
+      <Link to='/login'>
         <button type='button' className='signInButton'>Log in</button>
       </Link>
     </form>
