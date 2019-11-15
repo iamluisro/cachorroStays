@@ -1,0 +1,21 @@
+.myFavorites-text {
+  padding-left: 5px;
+  margin: 0px;
+}
+
+.favCarousel {
+    width: 100%;
+    position: relative; 
+    margin-bottom: 30px;
+    overflow: scroll;
+
+  }
+  
+.carousel__Favcontainer {
+    margin-right: 15px;
+   // border: 1px solid red;
+    font-size: 0;
+    white-space: nowrap;
+    padding-bottom: 10px;
+    display: flex;
+}
