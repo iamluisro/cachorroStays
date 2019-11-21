@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import '../assets/styles/components/hotel_details_styles.scss';
 import Layout from '../components/Layout';
-import hotelImg from '../assets/img/hikaru.png';
+import hotelImg from '../../assets/img/hikaru.png';
 
 const HotelDetails = () => {
   return (
@@ -15,7 +15,7 @@ const HotelDetails = () => {
               <button className='hero__img--cta--button' type='button'>
                 {' '}
                 <p>RESERVA LAS NOCHES DE TU PERRITO</p>
-{" "}
+                {' '}
               </button>
             </Link>
           </span>
