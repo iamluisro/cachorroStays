@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import LoginSocialMedia from '../components/LoginSocialMedia';
 import LoginEmail from '../components/LoginEmail';
 import Layout from '../components/Layout';
@@ -20,4 +21,4 @@ const LoginPage = () => {
   );
 };
 
-export default LoginPage;
+export default connect(null, null)(LoginPage);

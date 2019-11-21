@@ -10,6 +10,11 @@ const reducer = (state, action) => {
         ...state,
         myFavorites: state.myFavorites.filter((items) => items.id !== action.payload),
       };
+    case 'LOGIN_REQUEST':
+      return {
+        ...state,
+        user: action.payload,
+      };
 
     default: return state;
   }
