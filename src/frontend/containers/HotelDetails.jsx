@@ -7,7 +7,6 @@ import hotelImg from '../../assets/img/hikaru.png';
 
 const HotelDetails = (props) => {
   const {
-    id,
     hotelName,
     hotelRating,
     hotelAddress,
@@ -66,4 +65,10 @@ const HotelDetails = (props) => {
   );
 };
 
-export default connect(null, null)(HotelDetails);
+const mapStateToProps = (state) => {
+  return {
+    hotelData: state.hotelData,
+  };
+};
+
+export default connect(mapStateToProps, null)(HotelDetails);
