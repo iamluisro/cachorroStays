@@ -19,23 +19,6 @@ body {
     display: flex;
 }
 
-.header {
-    display: grid;
-	grid-template-columns: 1fr;
-	margin: 0;
-	padding-left: 15px;
-	color: white;
-	background: #d6610f;
-    box-shadow: 0 1px 7px rgba(0, 0, 0, 0.5);
-    
-    /* 	border: 1px solid red;
- */
-	position: sticky;
-	top: 0;
-	right: 0;
-	left: 0;
-}
-
 .booking {
     display: flex;
     align-items: center;
