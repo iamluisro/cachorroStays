@@ -37,6 +37,7 @@ export const loginUser = ({ email, password }) => {
     })
       .then(({ data }) => {
         dispatch(loginRequest(data));
+        console.log(data);
       })
       .catch((err) => {
         dispatch(loginRequest(false));
