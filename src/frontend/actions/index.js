@@ -15,6 +15,11 @@ export const registerRequest = (payload) => ({
   payload,
 });
 
+export const loginRequest = (payload) => ({
+  type: 'LOGIN_REQUEST',
+  payload,
+});
+
 export const setError = (payload) => ({
   type: 'SET_ERROR',
   payload,
