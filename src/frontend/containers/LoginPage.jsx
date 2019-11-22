@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import LoginSocialMedia from '../components/LoginSocialMedia';
-import LoginEmail from '../components/LoginEmail';
-import { loginRequest } from '../actions';
+import { loginUser } from '../actions';
 import Layout from '../components/Layout';
 import '../assets/styles/components/LoginPage.scss';
 
@@ -21,8 +20,7 @@ const LoginPage = (props) => {
 
   const handleSumbit = (event) => {
     event.preventDefault();
-    props.loginRequest(form);
-    props.history.push('/');
+    props.loginUser(form);
     console.log(form);
   };
 
@@ -35,21 +33,24 @@ const LoginPage = (props) => {
           </div>
           <LoginSocialMedia />
           <div className='login__container--with_email'>
-            <form className='login__container--with_email--form' onSubmit={handleSumbit}>
+            <form
+              className='login__container--with_email--form'
+              onSubmit={handleSumbit}
+            >
               <input
                 name='email'
-                type='text'
+                type='email'
+                placeholder='email'
                 onChange={handleInput}
               />
-              {' '}
-          email
+              email
               <input
                 name='password'
                 type='password'
+                placeholder='contraseña'
                 onChange={handleInput}
               />
-              {' '}
-          password
+              password
               <button type='submit'> Login </button>
             </form>
           </div>
@@ -60,7 +61,7 @@ const LoginPage = (props) => {
 };
 
 const mapDispatchToProps = {
-  loginRequest,
+  loginUser,
 };
 
 export default connect(null, mapDispatchToProps)(LoginPage);
