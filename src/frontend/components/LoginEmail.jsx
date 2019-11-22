@@ -6,6 +6,7 @@ import { loginRequest } from '../actions';
 const LoginEmail = (props) => {
   const [form, setValues] = useState({
     email: '',
+    password: '',
   });
 
   const handleInput = (event) => {
