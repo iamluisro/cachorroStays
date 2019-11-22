@@ -22,9 +22,18 @@ export const setError = (payload) => ({
 
 export const registerUser = (payload) => {
   return (dispatch) => {
-    axios
-      .post('/auth/sign-up', payload)
-      .then(({ data }) => dispatch(registerRequest(data)))
+    axios({
+      url: 'https://cachorrostays.iamluisro.now.sh/api/auth/sign-up',
+      method: 'post',
+      data: {
+        ...payload,
+        isAdmin: false,
+      },
+    })
+      .then((data) => {
+        // dispatch(loginUser(payload));
+        console.log(data);
+      })
       .catch((err) => dispatch(setError(err)));
   };
 };

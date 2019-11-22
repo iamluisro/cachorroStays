@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { registerRequest } from '../actions';
+import { registerUser } from '../actions';
 
-const RegisterForm = () => {
+const RegisterForm = (props) => {
   const [form, setValues] = useState({
     email: '',
     name: '',
@@ -15,18 +15,20 @@ const RegisterForm = () => {
       ...form,
       [event.target.name]: event.target.value,
     });
+
+    console.log(form);
   };
 
   const handleSubmit = (event) => {
-    event.preventDefault;
-    props.registerRequest(form);
-    props.history.push('/');
+    event.preventDefault();
+    props.registerUser(form, '/login');
     console.log(form);
   };
 
   return (
-    <form className='register__container--form' onSubmite={handleSubmit}>
+    <form className='register__container--form' onSubmit={handleSubmit}>
       <input
+        name='name'
         className='inputForm'
         type='text'
         placeholder='Name'
@@ -34,33 +36,24 @@ const RegisterForm = () => {
       />
 
       <input
+        name='email'
         className='inputForm'
         type='text'
         placeholder='Email'
         onChange={handleInput}
       />
-      <input className='inputForm' type='password' placeholder='Password' />
       <input
+        name='password'
         className='inputForm'
         type='password'
-        placeholder='Confirm Password'
+        placeholder='Password'
         onChange={handleInput}
       />
-      <Link to='/'>
-        <button type='button' className='registerButton'>
-          Register-me
-        </button>
-      </Link>
-      <div className='privacyTerms'>
-        <button
-          type='button'
-          className='privacyTerms__button'
-          alt='TermsAndPolicy'
-        />
-        <p className='privacyTerms__text'>
-          I agree to terms and privicy policy
-        </p>
-      </div>
+
+      <button type='submit' className='registerButton'>
+        Register-me
+      </button>
+
       <Link to='/login'>
         <button type='button' className='signInButton'>
           Log in
@@ -71,6 +64,6 @@ const RegisterForm = () => {
 };
 
 const mapDispatchToProps = {
-  registerRequest,
+  registerUser,
 };
 export default connect(null, mapDispatchToProps)(RegisterForm);
