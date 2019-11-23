@@ -1,29 +1,31 @@
 .header {
-    display: flex;
-	grid-template-columns: 1fr;
-	justify-content: space-around;
-	margin: 0;
-	padding-left: 15px;
-	color: white;
-	background: #d6610f;
-    box-shadow: 0 1px 7px rgba(0, 0, 0, 0.5);
-    
-    /* 	border: 1px solid red;
- */
-	position: sticky;
-	top: 0;
-	right: 0;
-	left: 0;
-	a {
-		text-decoration: none;
-		color: white;
-	}
+  display: flex;
 
+  margin: 0;
+  padding-left: 15px;
+  color: white;
+  background: #d6610f;
+  box-shadow: 0 1px 7px rgba(0, 0, 0, 0.5);
+
+  /* 	border: 1px solid red;
+ */
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  a {
+    text-decoration: none;
+    color: white;
+
+    h1 {
+      font-size: 2em;
+      margin-top: 0.67em;
+    }
+  }
 }
 
-
 .header__menu {
-	margin-right: 10px;
+  margin-right: 10px;
 }
 
 .header__menu ul {
@@ -36,8 +38,9 @@
   text-align: right;
 }
 
-.header__menu:hover ul, ul:hover {
-	display: block;
+.header__menu:hover ul,
+ul:hover {
+  display: block;
 }
 
 .header__menu li {

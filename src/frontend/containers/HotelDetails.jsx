@@ -4,13 +4,13 @@ import '../assets/styles/components/hotel_details_styles.scss';
 import Layout from '../components/Layout';
 import hotelImg from '../assets/img/hikaru.png';
 
-const HotelDetails = () => {
+const HotelDetails = (props) => {
   return (
     <Layout>
       <div className='hotel_details'>
-        <div className='hotel__details__container'>
+        <div className='hotel__info--container'>
           <span className='hero__section'>
-            <img className='hero__hotel--img' src={hotelImg} alt='backgruond' />
+            <img src={hotelImg} alt='background' />
             <Link to='/book'>
               <button className='hero__img--cta--button' type='button'>
                 {' '}
@@ -18,7 +18,7 @@ const HotelDetails = () => {
               </button>
             </Link>
           </span>
-          <div className='hero__hotel--title'>Pension Para Mascotas Hikaru</div>
+          <div className='hero__hotel--title'>{hotelName}</div>
           <div className='hero__hotel--rating__system'>****</div>
           <div className='hotel_address'>
             Sto Tomas Ajusco Km 28 1/2 Picacho Ajusco Tlalpan, Mexico
