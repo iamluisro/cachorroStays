@@ -15,8 +15,6 @@ const RegisterForm = (props) => {
       ...form,
       [event.target.name]: event.target.value,
     });
-
-    console.log(form);
   };
 
   const handleSubmit = (event) => {

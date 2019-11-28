@@ -4,13 +4,13 @@ import '../assets/styles/components/hotel_details_styles.scss';
 import Layout from '../components/Layout';
 import hotelImg from '../assets/img/hikaru.png';
 
-const HotelDetails = () => {
+const HotelDetails = (props) => {
   return (
     <Layout>
       <div className='hotel_details'>
-        <div className='hotel__details__container'>
+        <div className='hotel__info--container'>
           <span className='hero__section'>
-            <img className='hero__hotel--img' src={hotelImg} alt='backgruond' />
+            <img src={hotelImg} alt='background' />
             <Link to='/book'>
               <button className='hero__img--cta--button' type='button'>
                 {' '}

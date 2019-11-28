@@ -10,6 +10,7 @@ import '../assets/styles/App.scss';
 import NotFound from '../containers/NotFound';
 
 const App = () => {
+  //const initialState = useInitialState(API);
   return (
     <BrowserRouter>
       <Switch>
