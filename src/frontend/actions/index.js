@@ -25,7 +25,7 @@ export const setError = (payload) => ({
   payload,
 });
 
-export const loginUser = ({ email, password }) => {
+export const loginUser = ({ email, password }, redirectUrl) => {
   return (dispatch) => {
     axios({
       url: 'https://cachorrostays.iamluisro.now.sh/api/auth/sign-in',
@@ -39,6 +39,9 @@ export const loginUser = ({ email, password }) => {
         dispatch(loginRequest(data));
         console.log(data);
       })
+      .then(() => {
+        window.location.href = redirectUrl;
+      })
       .catch((err) => {
         dispatch(loginRequest(false));
         dispatch(setError(err));
@@ -46,7 +49,7 @@ export const loginUser = ({ email, password }) => {
   };
 };
 
-export const registerUser = (payload) => {
+export const registerUser = (payload, redirectUrl) => {
   return (dispatch) => {
     axios({
       url: 'https://cachorrostays.iamluisro.now.sh/api/auth/sign-up',
@@ -59,6 +62,9 @@ export const registerUser = (payload) => {
       .then((data) => {
         dispatch(loginUser(payload));
         console.log(data);
+      })
+      .then(() => {
+        window.location.href = redirectUrl;
       })
       .catch((err) => dispatch(setError(err)));
   };

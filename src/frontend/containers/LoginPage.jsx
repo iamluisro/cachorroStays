@@ -20,7 +20,7 @@ const LoginPage = (props) => {
 
   const handleSumbit = (event) => {
     event.preventDefault();
-    props.loginUser(form);
+    props.loginUser(form, '/');
     console.log(form);
   };
 
