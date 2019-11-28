@@ -36,7 +36,9 @@ const BookingItem = () => {
             <h1>¿Quieres que vayan a recoger a tu perrito?</h1>
             <button type='button'>¡Sí! Pasen a recoger a mi perrito</button>
             <button type='button'>No, yo voy a dejar a mi perrito</button>
-            <button type='button'>Confirmar reservación</button>
+            <Link to='/confirmation'>
+              <button type='button'>Confirmar reservación</button>
+            </Link>
           </form>
         </section>
       </section>

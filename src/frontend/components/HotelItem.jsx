@@ -63,7 +63,7 @@ const HotelItem = (props) => {
               </button>
             )}
 
-            <Link to={`/hotel-details/${id}`}>
+            <Link to='/hotel-details'>
               <button type='button' className='hotel__tile--buttons'>
                 Explore
               </button>

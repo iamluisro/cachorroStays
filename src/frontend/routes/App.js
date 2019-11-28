@@ -10,13 +10,14 @@ import '../assets/styles/App.scss';
 import NotFound from '../containers/NotFound';
 
 const App = () => {
+  //const initialState = useInitialState(API);
   return (
     <BrowserRouter>
       <Switch>
         <Route exact path='/register' component={Register} />
         <Route exact path='/login' component={Login} />
         <Route exact path='/' component={Home} />
-        <Route exact path='/hotel-details/:id' component={HotelDetails} />
+        <Route exact path='/hotel-details' component={HotelDetails} />
         <Route exact path='/book' component={Booking} />
         <Route exact path='/confirmation' component={ConfirmationPage} />
         <Route component={NotFound} />

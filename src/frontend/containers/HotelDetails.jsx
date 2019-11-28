@@ -18,7 +18,7 @@ const HotelDetails = (props) => {
               </button>
             </Link>
           </span>
-          <div className='hero__hotel--title'>{hotelName}</div>
+          <div className='hero__hotel--title'>Pension Para Mascotas Hikaru</div>
           <div className='hero__hotel--rating__system'>****</div>
           <div className='hotel_address'>
             Sto Tomas Ajusco Km 28 1/2 Picacho Ajusco Tlalpan, Mexico

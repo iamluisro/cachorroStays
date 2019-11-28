@@ -1,60 +1,56 @@
 .login {
-    //	border: 1px solid red;
-        display: grid;
-        grid-column-start: 1fr;
-    }   
-    
-    .login__container {
-        display: grid;
-        grid-column-start: 1fr;
-        height: 80vh;
-    }
-    
-    .Login__contianer--with-text {
-        height: 5vh;
-        h1 {
-            margin-left: 15px;
-            margin-top: 10px;
-            margin-bottom: 0;
-            font-size: 1.5em;
-        }
-    }
-    
-    .login__container--buttons {
-        display: grid;
-        margin: 0.67em;
-        padding: 0em 3em;
-        height: 30vh;
-        button {
-            margin-bottom: 5px;
-            background-color: white ;
+  //	border: 1px solid red;
+  display: grid;
+  grid-column-start: 1fr;
+}
 
-        }
-    }
-    
-    .login__container--with_email {
-        display: grid;
-        margin: 0.67em;
-        padding: 3em;
-        height: 46vh;
-    
-        button {
-            display: block;
-            margin: auto;
-            border-radius: 30px;
-            border: none;
-            height: 5vh;
-            width: 75%;
-            background: none;
-            font-size: 1.5em;
-            background-color:#d6610f ;
-            color: white;
-        }
-    }
-    
-    .login__container--with_email--form {
-        display: grid;
-        input {
-        }
-    }
-    
+.login__container {
+  display: grid;
+  margin-top: 5em;
+}
+
+.Login__contianer--with-text {
+  h1 {
+    margin-left: 15px;
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-size: 1.5em;
+  }
+}
+
+.login__container--buttons {
+  display: grid;
+  margin: 0.67em;
+  padding: 0em 3em;
+  height: 30vh;
+  button {
+    margin-bottom: 5px;
+    background-color: white;
+  }
+}
+
+.login__container--with_email {
+  display: grid;
+  margin: 0.67em;
+  padding: 3em;
+  height: 46vh;
+
+  button {
+    display: block;
+    margin: auto;
+    border-radius: 30px;
+    border: none;
+    height: 5vh;
+    width: 75%;
+    background: none;
+    font-size: 1.5em;
+    background-color: #d6610f;
+    color: white;
+  }
+}
+
+.login__container--with_email--form {
+  display: grid;
+  input {
+  }
+}
