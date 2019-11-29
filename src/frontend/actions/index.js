@@ -36,12 +36,14 @@ export const loginUser = ({ email, password }, redirectUrl) => {
       },
     })
       .then(({ data }) => {
+        document.cookie = `email=${data.email}`;
+        document.cookie = `name=${data.name}`;
+        document.cookie = `_id=${data._id}`;
         dispatch(loginRequest(data));
-        console.log(data);
       })
-      .then(() => {
+      /* .then(() => {
         window.location.href = redirectUrl;
-      })
+      }) */
       .catch((err) => {
         dispatch(loginRequest(false));
         dispatch(setError(err));
