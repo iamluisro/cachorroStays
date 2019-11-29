@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import LoginSocialMedia from '../components/LoginSocialMedia';
-import { loginUser, loginRequest } from '../actions';
+import { loginUser } from '../actions';
 import Layout from '../components/Layout';
 import '../assets/styles/components/LoginPage.scss';
 
@@ -20,11 +20,10 @@ const LoginPage = (props) => {
 
   const handleSumbit = (event) => {
     event.preventDefault();
-    props.loginUser(form, '/');
-    props.loginRequest(form);
+    props.loginUser(form);
+    props.history.push('/');
     console.log(form);
   };
-
   return (
     <Layout>
       <section className='login'>
@@ -61,16 +60,8 @@ const LoginPage = (props) => {
   );
 };
 
-const mapStateToProps = (state) => {
-  return {
-    ...state,
-    user: state.user,
-  };
-};
-
 const mapDispatchToProps = {
   loginUser,
-  loginRequest,
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(LoginPage);
+export default connect(null, mapDispatchToProps)(LoginPage);

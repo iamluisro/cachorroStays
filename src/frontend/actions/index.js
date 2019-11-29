@@ -40,7 +40,6 @@ export const loginUser = ({ email, password }, redirectUrl) => {
         document.cookie = `name=${data.name}`;
         document.cookie = `_id=${data._id}`;
         dispatch(loginRequest(data));
-        console.log(data._id);
       })
       /* .then(() => {
         window.location.href = redirectUrl;

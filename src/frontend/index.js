@@ -64,9 +64,7 @@ const store = createStore(
 
 ReactDOM.render(
   <Provider store={store}>
-    {/* este initialState.user.name me sale vacio... y no logro llenarlo para que cuando
-  el login sea exitoso, el store reconozca que el "user" tiene algo dentro. */}
-    <App isLogged={initialState.user.name} />
+    <App />
   </Provider>,
   document.getElementById('app'),
 );
