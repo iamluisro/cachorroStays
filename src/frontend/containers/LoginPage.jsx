@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import LoginSocialMedia from '../components/LoginSocialMedia';
-import { loginUser } from '../actions';
+import { loginUser, loginRequest } from '../actions';
 import Layout from '../components/Layout';
 import '../assets/styles/components/LoginPage.scss';
 
@@ -21,6 +21,7 @@ const LoginPage = (props) => {
   const handleSumbit = (event) => {
     event.preventDefault();
     props.loginUser(form, '/');
+    props.loginRequest(form);
     console.log(form);
   };
 
@@ -43,14 +44,14 @@ const LoginPage = (props) => {
                 placeholder='email'
                 onChange={handleInput}
               />
-              email
+
               <input
                 name='password'
                 type='password'
                 placeholder='contraseña'
                 onChange={handleInput}
               />
-              password
+
               <button type='submit'> Login </button>
             </form>
           </div>
@@ -60,8 +61,16 @@ const LoginPage = (props) => {
   );
 };
 
-const mapDispatchToProps = {
-  loginUser,
+const mapStateToProps = (state) => {
+  return {
+    ...state,
+    user: state.user,
+  };
 };
 
-export default connect(null, mapDispatchToProps)(LoginPage);
+const mapDispatchToProps = {
+  loginUser,
+  loginRequest,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(LoginPage);

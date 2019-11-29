@@ -54,7 +54,7 @@ const initialState = {
     },
   ],
 };
-
+console.log(initialState);
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(
   reducer,
@@ -64,7 +64,9 @@ const store = createStore(
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    {/* este initialState.user.name me sale vacio... y no logro llenarlo para que cuando
+  el login sea exitoso, el store reconozca que el "user" tiene algo dentro. */}
+    <App isLogged={initialState.user.name} />
   </Provider>,
   document.getElementById('app'),
 );
