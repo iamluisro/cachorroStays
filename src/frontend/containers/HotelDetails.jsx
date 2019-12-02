@@ -1,19 +1,22 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import '../assets/styles/components/hotel_details_styles.scss';
 import Layout from '../components/Layout';
+import { setSelectedHotel } from '../actions';
 import hotelImg from '../../assets/img/hikaru.png';
+import NotFound from './NotFound';
 
 const HotelDetails = (props) => {
-  const {
-    hotelName,
-    hotelRating,
-    hotelAddress,
-    hotelDescription,
-  } = props;
 
-  return (
+  const { id } = props.match.params;
+  const hasHotel = props.selectedHotel;
+
+  useEffect(() => {
+    props.setSelectedHotel(id);
+  }, []);
+
+  return hasHotel ? (
     <Layout>
       <div className='hotel_details'>
         <div className='hotel__details__container'>
@@ -27,15 +30,15 @@ const HotelDetails = (props) => {
               </button>
             </Link>
           </span>
-          <div className='hero__hotel--title'>{hotelName}</div>
-          <div className='hero__hotel--rating__system'>{hotelRating}</div>
+          <div className='hero__hotel--title'>{props.selectedHotel.hotelName}</div>
+          <div className='hero__hotel--rating__system'>{props.selectedHotel.hotelRating}</div>
           <div className='hotel_address'>
-            {hotelAddress}
+            {props.selectedHotel.hotelAddress}
           </div>
           <div className='hotel__description'>
             <h1 className='hotel__subtitle'>Descripción</h1>
             <p className='hotel__description--description'>
-              {hotelDescription}
+              {props.selectedHotel.hotelDescription}
             </p>
             <div className='hotel__additional__services'>
               <h1 className='hotel__subtitle'>Servicios Adicionales</h1>
@@ -62,13 +65,17 @@ const HotelDetails = (props) => {
         </div>
       </div>
     </Layout>
-  );
+  ) : <NotFound />;
+};
+
+const mapDispatchToProps = {
+  setSelectedHotel,
 };
 
 const mapStateToProps = (state) => {
   return {
-    hotelData: state.hotelData,
+    selectedHotel: state.selectedHotel,
   };
 };
 
-export default connect(mapStateToProps, null)(HotelDetails);
+export default connect(mapStateToProps, mapDispatchToProps)(HotelDetails);

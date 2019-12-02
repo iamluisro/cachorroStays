@@ -9,6 +9,7 @@ import App from './routes/App';
 const initialState = {
   user: {},
   myFavorites: [],
+  selectedHotel: {},
   hotelData: [
     {
       id: 1,
