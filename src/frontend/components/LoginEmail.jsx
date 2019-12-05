@@ -1,22 +1,55 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { loginRequest } from '../actions';
 
-const LoginEmail = () => {
+const LoginEmail = (props) => {
+  const [form, setValues] = useState({
+    email: '',
+    password: '',
+  });
+
+  const handleInput = (event) => {
+    setValues({
+      ...form,
+      [event.target.name]: event.target.value,
+    });
+  };
+
+  const handleSumbit = (event) => {
+    event.preventDefault();
+    props.loginRequest(form);
+    props.history.push('/');
+    console.log(form);
+  };
+
   return (
     <div className='login__container--with_email'>
-      <form action='submit' className='login__container--with_email--form'>
-        <input type='text' />
+      <form action='submit' className='login__container--with_email--form' onSubmit={handleSumbit}>
+        <input
+          name='email'
+          type='text'
+          onChange={handleInput}
+        />
         {' '}
-email
-        <input type='text' />
+          email
+        <input
+          name='password'
+          type='password'
+          onChange={handleInput}
+        />
         {' '}
-password
+          password
         <Link to='/'>
-          <button type='button'> Login </button>
+          <button type='submit'> Login </button>
         </Link>
       </form>
     </div>
   );
 };
 
-export default LoginEmail;
+const mapDispatchToProps = {
+  loginRequest,
+};
+
+export default connect(null, mapDispatchToProps)(LoginEmail);

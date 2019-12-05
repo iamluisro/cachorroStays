@@ -3,28 +3,19 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import '../assets/styles/components/hotel_details_styles.scss';
 import Layout from '../components/Layout';
-import hotelImg from '../../assets/img/hikaru.png';
+import hotelImg from '../assets/img/hikaru.png';
 
-const HotelDetails = (props) => {
-  const {
-    id,
-    hotelName,
-    hotelRating,
-    hotelAddress,
-    hotelDescription,
-  } = props;
-
+const HotelDetails = () => {
   return (
     <Layout>
       <div className='hotel_details'>
-        <div className='hotel__details__container'>
+        <div className='hotel__info--container'>
           <span className='hero__section'>
-            <img className='hero__hotel--img' src={hotelImg} alt='backgruond' />
+            <img src={hotelImg} alt='background' />
             <Link to='/book'>
               <button className='hero__img--cta--button' type='button'>
                 {' '}
                 <p>RESERVA LAS NOCHES DE TU PERRITO</p>
-                {' '}
               </button>
             </Link>
           </span>

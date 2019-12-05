@@ -1,28 +1,67 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { registerUser } from '../actions';
 
-const RegisterForm = () => {
+const RegisterForm = (props) => {
+  const [form, setValues] = useState({
+    email: '',
+    name: '',
+    password: '',
+  });
+
+  const handleInput = (event) => {
+    setValues({
+      ...form,
+      [event.target.name]: event.target.value,
+    });
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    props.registerUser(form, '/');
+    console.log(form);
+  };
+
   return (
-    <form className='register__container--form'>
-      <input className='inputForm' type='text' placeholder='First name' />
-      <input className='inputForm' type='text' placeholder='Last name' />
-      <input className='inputForm' type='text' placeholder='Username' />
-      <input className='inputForm' type='text' placeholder='Email' />
-      <input className='inputForm' type='text' placeholder='Phone Number' />
-      <input className='inputForm' type='password' placeholder='Password' />
-      <input className='inputForm' type='password' placeholder='Confirm Password' />
-      <Link to='/'>
-        <button type='button' className='registerButton'>Register-me</button>
-      </Link>
-      <div className='privacyTerms'>
-        <button type='button' className='privacyTerms__button' alt='TermsAndPolicy' />
-        <p className='privacyTerms__text'>I agree to terms and privicy policy</p>
-      </div>
+    <form className='register__container--form' onSubmit={handleSubmit}>
+      <input
+        name='name'
+        className='inputForm'
+        type='text'
+        placeholder='Name'
+        onChange={handleInput}
+      />
+
+      <input
+        name='email'
+        className='inputForm'
+        type='text'
+        placeholder='Email'
+        onChange={handleInput}
+      />
+      <input
+        name='password'
+        className='inputForm'
+        type='password'
+        placeholder='Password'
+        onChange={handleInput}
+      />
+
+      <button type='submit' className='registerButton'>
+        Register-me
+      </button>
+
       <Link to='/login'>
-        <button type='button' className='signInButton'>Log in</button>
+        <button type='button' className='signInButton'>
+          Log in
+        </button>
       </Link>
     </form>
   );
 };
 
-export default RegisterForm;
+const mapDispatchToProps = {
+  registerUser,
+};
+export default connect(null, mapDispatchToProps)(RegisterForm);

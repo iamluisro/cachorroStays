@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../assets/styles/components/Header.scss';
-import dogBone from '../../assets/img/dogBone-icon.png';
+import dogBone from '../assets/img/dogBone-icon.png';
 
 const Header = () => {
   return (
@@ -25,7 +25,6 @@ const Header = () => {
             </Link>
           </ul>
         </div>
-
       </header>
     </div>
   );
