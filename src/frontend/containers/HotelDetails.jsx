@@ -1,33 +1,44 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import '../assets/styles/components/hotel_details_styles.scss';
 import Layout from '../components/Layout';
-import hotelImg from '../assets/img/hikaru.png';
+import { setSelectedHotel } from '../actions';
+import hotelImg from '../../assets/img/hikaru.png';
+import NotFound from './NotFound';
 
-const HotelDetails = () => {
-  return (
+const HotelDetails = (props) => {
+
+  const { id } = props.match.params;
+  const hasHotel = props.selectedHotel;
+
+  useEffect(() => {
+    props.setSelectedHotel(id);
+  }, []);
+
+  return hasHotel ? (
     <Layout>
       <div className='hotel_details'>
-        <div className='hotel__info--container'>
+        <div className='hotel__details__container'>
           <span className='hero__section'>
-            <img src={hotelImg} alt='background' />
+            <img className='hero__hotel--img' src={hotelImg} alt='backgruond' />
             <Link to='/book'>
               <button className='hero__img--cta--button' type='button'>
                 {' '}
                 <p>RESERVA LAS NOCHES DE TU PERRITO</p>
+                {' '}
               </button>
             </Link>
           </span>
-          <div className='hero__hotel--title'>{hotelName}</div>
-          <div className='hero__hotel--rating__system'>{hotelRating}</div>
+          <div className='hero__hotel--title'>{props.selectedHotel.hotelName}</div>
+          <div className='hero__hotel--rating__system'>{props.selectedHotel.hotelRating}</div>
           <div className='hotel_address'>
-            {hotelAddress}
+            {props.selectedHotel.hotelAddress}
           </div>
           <div className='hotel__description'>
             <h1 className='hotel__subtitle'>Descripción</h1>
             <p className='hotel__description--description'>
-              {hotelDescription}
+              {props.selectedHotel.hotelDescription}
             </p>
             <div className='hotel__additional__services'>
               <h1 className='hotel__subtitle'>Servicios Adicionales</h1>
@@ -54,7 +65,17 @@ const HotelDetails = () => {
         </div>
       </div>
     </Layout>
-  );
+  ) : <NotFound />;
 };
 
-export default connect(null, null)(HotelDetails);
+const mapDispatchToProps = {
+  setSelectedHotel,
+};
+
+const mapStateToProps = (state) => {
+  return {
+    selectedHotel: state.selectedHotel,
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(HotelDetails);

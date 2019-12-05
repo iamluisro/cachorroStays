@@ -20,6 +20,11 @@ export const loginRequest = (payload) => ({
   payload,
 });
 
+export const setSelectedHotel = (payload) => ({
+  type: 'SET_SELECTED_HOTEL',
+  payload,
+});
+
 export const setError = (payload) => ({
   type: 'SET_ERROR',
   payload,
