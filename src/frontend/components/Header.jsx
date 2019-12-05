@@ -1,9 +1,14 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import '../assets/styles/components/Header.scss';
 import dogBone from '../../assets/img/dogBone-icon.png';
+import userIcon from '../../assets/img/hikaru.png';
 
-const Header = () => {
+const Header = (props) => {
+  const { user } = props;
+  const hasUser = Object.keys(user).length > 0;
+
   return (
     <div>
       <header className='header'>
@@ -13,7 +18,11 @@ const Header = () => {
 
         <div className='header__menu'>
           <div className='header__menu--profile'>
-            <img src={dogBone} alt='' />
+            {hasUser ? (
+              <img src={dogBone} alt='' />
+            ) : (
+              <img src={userIcon} alt='user icon' />
+            )}
             <p>Perfil</p>
           </div>
           <ul>
@@ -30,4 +39,10 @@ const Header = () => {
   );
 };
 
-export default Header;
+const mapStateToProps = (state) => {
+  return {
+    user: state.user,
+  };
+};
+
+export default connect(mapStateToProps, null)(Header);

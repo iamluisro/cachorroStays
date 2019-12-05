@@ -20,10 +20,10 @@ const LoginPage = (props) => {
 
   const handleSumbit = (event) => {
     event.preventDefault();
-    props.loginUser(form, '/');
+    props.loginUser(form);
+    props.history.push('/');
     console.log(form);
   };
-
   return (
     <Layout>
       <section className='login'>
@@ -43,14 +43,14 @@ const LoginPage = (props) => {
                 placeholder='email'
                 onChange={handleInput}
               />
-              email
+
               <input
                 name='password'
                 type='password'
                 placeholder='contraseña'
                 onChange={handleInput}
               />
-              password
+
               <button type='submit'> Login </button>
             </form>
           </div>
