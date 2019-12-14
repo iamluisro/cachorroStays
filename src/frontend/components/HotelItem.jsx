@@ -3,7 +3,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { setFavorite, deleteFavorite } from '../actions';
-import hotelImage from '../../assets/img/hikaru.png';
+import hotelImage from '../assets/img/hikaru.png';
 import '../assets/styles/components/home_styles.scss';
 
 const HotelItem = (props) => {
@@ -51,7 +51,6 @@ const HotelItem = (props) => {
               >
                 {' '}
                 Eliminar de Favoritos
-                {' '}
               </button>
             ) : (
               <button
@@ -61,7 +60,6 @@ const HotelItem = (props) => {
               >
                 {' '}
                 Agregar a Favoritos
-                {' '}
               </button>
             )}
 

@@ -68,7 +68,6 @@ export const registerUser = (payload, redirectUrl) => {
     })
       .then((data) => {
         dispatch(loginUser(payload));
-        console.log(data);
       })
       .then(() => {
         window.location.href = redirectUrl;

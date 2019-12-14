@@ -4,13 +4,13 @@ import { Link } from 'react-router-dom';
 import '../assets/styles/components/hotel_details_styles.scss';
 import Layout from '../components/Layout';
 import { setSelectedHotel } from '../actions';
-import hotelImg from '../../assets/img/hikaru.png';
+import hotelImg from '../assets/img/hikaru.png';
 import NotFound from './NotFound';
 
 const HotelDetails = (props) => {
-
   const { id } = props.match.params;
-  const hasHotel = props.selectedHotel;
+  const hasHotel = Object.keys(props.selectedHotel).length > 0;
+  console.log(`This is the set Hotel: ${props}`);
 
   useEffect(() => {
     props.setSelectedHotel(id);
@@ -26,12 +26,15 @@ const HotelDetails = (props) => {
               <button className='hero__img--cta--button' type='button'>
                 {' '}
                 <p>RESERVA LAS NOCHES DE TU PERRITO</p>
-                {' '}
               </button>
             </Link>
           </span>
-          <div className='hero__hotel--title'>{props.selectedHotel.hotelName}</div>
-          <div className='hero__hotel--rating__system'>{props.selectedHotel.hotelRating}</div>
+          <div className='hero__hotel--title'>
+            {props.selectedHotel.hotelName}
+          </div>
+          <div className='hero__hotel--rating__system'>
+            {props.selectedHotel.hotelRating}
+          </div>
           <div className='hotel_address'>
             {props.selectedHotel.hotelAddress}
           </div>
@@ -65,17 +68,18 @@ const HotelDetails = (props) => {
         </div>
       </div>
     </Layout>
-  ) : <NotFound />;
+  ) : (
+    <NotFound />
+  );
 };
-
-const mapDispatchToProps = {
-  setSelectedHotel,
-};
-
 const mapStateToProps = (state) => {
   return {
     selectedHotel: state.selectedHotel,
   };
+};
+
+const mapDispatchToProps = {
+  setSelectedHotel,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(HotelDetails);

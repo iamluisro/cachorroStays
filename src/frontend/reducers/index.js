@@ -26,7 +26,7 @@ const reducer = (state, action) => {
     case 'SET_SELECTED_HOTEL':
       return {
         ...state,
-        selectedHotel: state.hotelData.find((items) => items.id === Number(action.payload)),
+        selectedHotel: state.hotelData.find((item) => item.id === Number(action.payload)) || [],
       };
 
     default:

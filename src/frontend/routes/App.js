@@ -22,7 +22,7 @@ const App = (props) => {
         <Route exact path='/' component={hasUser ? Home : Login} />
         <Route
           exact
-          path='/hotel-details'
+          path='/hotel-details/:id'
           component={hasUser ? HotelDetails : Login}
         />
         <Route exact path='/book' component={hasUser ? Booking : Login} />
