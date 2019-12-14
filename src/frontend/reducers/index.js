@@ -23,6 +23,12 @@ const reducer = (state, action) => {
         user: action.payload,
       };
 
+    case 'SET_SELECTED_HOTEL':
+      return {
+        ...state,
+        selectedHotel: state.hotelData.find((items) => items.id === Number(action.payload)),
+      };
+
     default:
       return state;
   }
