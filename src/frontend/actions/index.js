@@ -20,6 +20,11 @@ export const loginRequest = (payload) => ({
   payload,
 });
 
+export const setSelectedHotel = (payload) => ({
+  type: 'SET_SELECTED_HOTEL',
+  payload,
+});
+
 export const setError = (payload) => ({
   type: 'SET_ERROR',
   payload,
@@ -63,7 +68,6 @@ export const registerUser = (payload, redirectUrl) => {
     })
       .then((data) => {
         dispatch(loginUser(payload));
-        console.log(data);
       })
       .then(() => {
         window.location.href = redirectUrl;
