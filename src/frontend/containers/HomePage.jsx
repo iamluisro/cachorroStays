@@ -7,7 +7,6 @@ import HotelCarousel from '../components/HotelCarousel';
 import FavoritesCarousel from '../components/FavoritesCarousel';
 
 const HomePage = ({ hotelData, myFavorites }) => {
-
   const ConsoleLog = ({ children }) => {
     console.log(children);
     return false;
@@ -24,11 +23,7 @@ const HomePage = ({ hotelData, myFavorites }) => {
             {myFavorites.length > 0 && (
               <FavoritesCarousel>
                 {myFavorites.map((item) => (
-                  <HotelItem
-                    key={item.id}
-                    {...item}
-                    isList
-                  />
+                  <HotelItem key={item.id} {...item} isList />
                 ))}
               </FavoritesCarousel>
             )}

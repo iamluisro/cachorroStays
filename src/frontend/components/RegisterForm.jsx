@@ -15,13 +15,11 @@ const RegisterForm = (props) => {
       ...form,
       [event.target.name]: event.target.value,
     });
-
-    console.log(form);
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    props.registerUser(form, '/login');
+    props.registerUser(form, '/');
     console.log(form);
   };
 

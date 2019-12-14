@@ -6,32 +6,40 @@ const BookingItem = () => {
   return (
     <div>
       <section className='booking'>
-        <div className='hotel_name'>
-          <h1>Reservación para: kangaroo Valley Safari</h1>
-        </div>
+        <h1>Reservación para: kangaroo Valley Safari</h1>
         <section className='booking__container'>
           <form className='booking__container--form'>
-            <h1>selecciona las fechas para tu perrito</h1>
+            <h1>¿Cuales son tus fechas de viaje?</h1>
             <input className='input' type='text' placeholder='Check-in' />
             <input className='input' type='text' placeholder='Check-out' />
-            <h1>Información adicional</h1>
-            <input className='input' type='text' placeholder='Nombre del propietario' />
-            <input className='input' type='text' placeholder='Nombre del perrito' />
-            <input className='input' type='text' placeholder='Whatsapp' />
-            <input className='input' type='text' placeholder='Email del propietario' />
-          </form>
-          <section className='booking__container--additional-services'>
-            <h1>Selecciona un método de entrega de perrito</h1>
-            <button type='button'>Recoger a mi perrito</button>
-            {' '}
-            <br />
-            <button type='button'>Yo voy a dejar a mi perrito</button>
-          </section>
-          <div className='confirm'>
+            <h1>Acerca de ti y tu perrhijo</h1>
+            <input
+              className='input'
+              type='text'
+              placeholder='¿Cuál es tu nombre?'
+            />
+            <input
+              className='input'
+              type='text'
+              placeholder='¿Cómo se llama tu perrito?'
+            />
+            <input
+              className='input'
+              type='text'
+              placeholder='Tu número de whatsApp'
+            />
+            <input
+              className='input'
+              type='text'
+              placeholder='Tu correo electronico'
+            />
+            <h1>¿Quieres que vayan a recoger a tu perrito?</h1>
+            <button type='button'>¡Sí! Pasen a recoger a mi perrito</button>
+            <button type='button'>No, yo voy a dejar a mi perrito</button>
             <Link to='/confirmation'>
               <button type='button'>Confirmar reservación</button>
             </Link>
-          </div>
+          </form>
         </section>
       </section>
     </div>

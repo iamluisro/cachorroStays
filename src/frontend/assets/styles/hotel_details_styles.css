@@ -3,7 +3,8 @@ body {
   font-family: "Varela", sans-serif;
   color: white;
   font-size: 12px;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./img/background_pup.png");
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("./img/background_pup.png");
   background-repeat: no-repeat;
   background-size: auto;
 }
@@ -22,13 +23,6 @@ body {
   top: 0;
   right: 0;
   left: 0;
-}
-
-.hotel__details__container {
-  /* 	border: 1px solid blue;
-  */
-  display: grid;
-  grid-template-columns: 1fr;
 }
 
 .hero__section {

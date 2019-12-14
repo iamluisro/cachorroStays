@@ -1,65 +1,66 @@
 @import url(https://fonts.googleapis.com/css?family=Varela&display=swap);
 
 body {
-	margin: 0;
-	font-family: 'Varela', sans-serif;
-	color: grey;
-	font-size: 12px;
-	background: rgb(252, 252, 252);
+  margin: 0;
+  font-family: "Varela", sans-serif;
+  color: grey;
+  font-size: 12px;
+  background: rgb(252, 252, 252);
 }
 
 .hotel__details__container {
-	/* 	border: 1px solid blue;
+  /* 	border: 1px solid blue;
  */
-	display: grid;
-	grid-template-columns: 1fr;
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: 5em;
 }
 
 .hero__hotel--booking_info {
-	/* for desktop: display: flex;
+  /* for desktop: display: flex;
     text-align: center; 
     justify-content: space-around;*/
-	display: flex;
-	flex-direction: column;
-	margin: 0 20px 0 15px;
-	font-size: 1.67em;
+  display: flex;
+  flex-direction: column;
+  margin: 0 20px 0 15px;
+  font-size: 1.67em;
 
-	h1 {
-		font-size: 3em;
-		margin-bottom: 15px;
-	}
+  h1 {
+    font-size: 3em;
+    margin-bottom: 15px;
+  }
 
-	h2 {
-		font-size: 1.5em;
-		margin: 15px 0;
-	}
+  h2 {
+    font-size: 1.5em;
+    margin: 15px 0;
+  }
 }
 
 .hero__hotel--img {
-	width: 100%;
-	box-shadow: 0 1px 7px rgba(0, 0, 0, 0.5);
-	border-radius: 15px;
-	margin-bottom: 15px;
+  width: 100%;
+  box-shadow: 0 1px 7px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  margin-bottom: 15px;
 }
 
 .confirmation_pg--checkin-checkout-container {
-	padding-bottom: 20px;
+  padding-bottom: 20px;
 }
 
 .hotel__confirmation--hotel-contact {
-	/* padding: 2px 0 0 15px; */
-	margin: 0 15px 0 15px;
-	font-size: 1.333em;
+  /* padding: 2px 0 0 15px; */
+  margin: 0 15px 0 15px;
+  font-size: 1.333em;
 }
 
 .hotel__confirmation-code {
-	margin: 0 15px 0 15px;
+  margin: 0 15px 0 15px;
 }
 
 .hotel__confirmation-code h1 {
-	font-size: 2em;
+  font-size: 2em;
 }
 
 .hotel__confirmation-code p {
-	font-size: 1.33em;
+  font-size: 1.33em;
 }

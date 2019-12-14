@@ -38,9 +38,23 @@ const initialState = {
       picksUpDog: true,
       yearEstablished: 1997,
     },
+    {
+      id: 3,
+      hotelName: 'Hotel de Perrhijos',
+      hotelImg: '../assets/img/hikaru.png',
+      hotelDescription:
+        'Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.',
+      hotelWebsite: 'https://bizjournals.com/sed/vel/enim.xml',
+      hotelAddress: 'Platzi México',
+      hotelRating: '*****',
+      costPerNight: 200,
+      currency: 'MXN',
+      picksUpDog: true,
+      yearEstablished: 1997,
+    },
   ],
 };
-
+console.log(initialState);
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(
   reducer,

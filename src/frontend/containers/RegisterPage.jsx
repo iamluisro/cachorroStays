@@ -8,9 +8,7 @@ const RegisterPage = () => {
     <Layout>
       <section className='register'>
         <h1>Register</h1>
-        <section className='register__container'>
-          <RegisterForm />
-        </section>
+        <RegisterForm />
       </section>
     </Layout>
   );
